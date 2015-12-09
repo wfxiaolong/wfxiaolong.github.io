@@ -1,4 +1,0 @@
-baseurl = "http://wfxiaolong.github.com/"
-languageCode = "en-us"
-theme = 'hyde'
-title = "My New Hugo Site"
