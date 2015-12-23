@@ -1,176 +1,308 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<style>
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote {
-    margin: 0;
-    padding: 0;
+<title>这是一封来自晓龙的简历</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
+
+/* BODY
+=============================================================================*/
+
 body {
-    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
-    font-size: 13px;
-    line-height: 18px;
-    color: #737373;
-    background-color: white;
-    margin: 10px 13px 10px 13px;
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
 }
-table {
-	margin: 10px 0 15px 0;
-	border-collapse: collapse;
+
+body>*:first-child {
+  margin-top: 0 !important;
 }
-td,th {	
-	border: 1px solid #ddd;
-	padding: 3px 10px;
+
+body>*:last-child {
+  margin-bottom: 0 !important;
 }
-th {
-	padding: 5px 10px;	
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
 }
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
 
 a {
-    color: #0069d6;
+  color: #4183C4;
+  text-decoration: none;
 }
+
 a:hover {
-    color: #0050a3;
-    text-decoration: none;
+  text-decoration: underline;
 }
-a img {
-    border: none;
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
 }
-p {
-    margin-bottom: 9px;
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #404040;
-    line-height: 36px;
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
 }
-h1 {
-    margin-bottom: 18px;
-    font-size: 30px;
+
+dl {
+  padding: 0;
 }
-h2 {
-    font-size: 24px;
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
 }
-h3 {
-    font-size: 18px;
+
+dl dt:first-child {
+  padding: 0;
 }
-h4 {
-    font-size: 16px;
+
+dl dt>:first-child {
+  margin-top: 0px;
 }
-h5 {
-    font-size: 14px;
+
+dl dt>:last-child {
+  margin-bottom: 0px;
 }
-h6 {
-    font-size: 13px;
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
 }
-hr {
-    margin: 0 0 19px;
-    border: 0;
-    border-bottom: 1px solid #ccc;
+
+dl dd>:first-child {
+  margin-top: 0px;
 }
-blockquote {
-    padding: 13px 13px 21px 15px;
-    margin-bottom: 18px;
-    font-family:georgia,serif;
-    font-style: italic;
+
+dl dd>:last-child {
+  margin-bottom: 0px;
 }
-blockquote:before {
-    content:"\201C";
-    font-size:40px;
-    margin-left:-10px;
-    font-family:georgia,serif;
-    color:#eee;
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
 }
-blockquote p {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 18px;
-    margin-bottom: 0;
-    font-style: italic;
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
 }
-code, pre {
-    font-family: Monaco, Andale Mono, Courier New, monospace;
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
 }
-code {
-    background-color: #fee9cc;
-    color: rgba(0, 0, 0, 0.75);
-    padding: 1px 3px;
-    font-size: 12px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
+
 pre {
-    display: block;
-    padding: 14px;
-    margin: 0 0 18px;
-    line-height: 16px;
-    font-size: 11px;
-    border: 1px solid #d9d9d9;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
 }
-pre code {
-    background-color: #fff;
-    color:#737373;
-    font-size: 11px;
-    padding: 0;
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
 }
-sup {
-    font-size: 0.83em;
-    vertical-align: super;
-    line-height: 0;
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
 }
-* {
-	-webkit-print-color-adjust: exact;
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
 }
-@media screen and (min-width: 914px) {
-    body {
-        width: 854px;
-        margin:10px auto;
-    }
+
+blockquote>:first-child {
+  margin-top: 0px;
 }
-@media print {
-	body,code,pre code,h1,h2,h3,h4,h5,h6 {
-		color: black;
-	}
-	table, pre {
-		page-break-inside: avoid;
-	}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
 }
 </style>
-<title>这是一封来自晓龙的简历</title>
-
 </head>
 <body>
 <h2>这是一封来自晓龙的简历</h2>
-
 <hr />
-
-<blockquote><p>男 25岁 身高170 体重55kg 现居住于广州 </br>
+<blockquote>
+<p>男 25岁 身高170 体重55kg 现居住于广州 </br>
 2010-2014 广东工业大学 自动化网络工程 </br>
-普通平凡而又老实的样子，很好的掩饰自己内心很躁动的青春</p></blockquote>
-
+普通平凡而又老实的样子，很好的掩饰自己内心很躁动的青春</p>
+</blockquote>
 <h5>我的最近一份工作经验：</h5>
-
 <p>2014.04至今</br>
 <strong>广州优蜜股份信息有限公司(刚上市)</br>
 职位: 研发工程师</strong></br></br>
 工作内容:</br></p>
-
 <ul>
 <li>iOS游戏SDK维护。主要负责游戏平台SDK维护更新工作</li>
 <li>iOS客户端包括：零钱夺宝,试货,鲸特卖,蜻蜓图吧,团团战（除了零钱夺宝，其它的APP，由于账号被封，已经搜不到）用于测试广告,和盈利模式的APP开发</li>
@@ -181,24 +313,19 @@ sup {
 <li>使用boostrap,php,smarty等用于开发项目后台,方便运营管理同事管理电商商品,商品管理，订单管理，活动管理等</li>
 <li>期间还有各种新技术的尝试,比如ionic开发出来的hybrid app</li>
 </ul>
-
-
 <p>2013.06至2014.04</br>
 <strong>广州新泛联数码科技有限公司</br>
 职位: 研发工程师</strong></br></br>
 工作内容:</br></p>
-
 <ul>
 <li>桌面端软件开发，基于webkit的浏览器内核做UI</li>
 <li>页游客户端，游戏sdk开发</li>
 <li>安卓adb工具源码修改</li>
 <li>通用网关cgi接口开发，协议定制</li>
 <li>基于ie内核开发的手游桌面客户端</li>
+<li>公司主站开发</li>
 </ul>
-
-
 <p><strong>小结:</strong></p>
-
 <ul>
 <li>丰富的iOS开发经验,爱好广泛</li>
 <li>独立开发上线多个APP，苹果账号的管理</li>
@@ -207,11 +334,8 @@ sup {
 <li>有一定的项目管理经验,习惯于高效率的开发完成各种东西,对事不对人</li>
 <li>有自主的求知欲望,有自己的订阅,知识技能树,查阅不只是技术的资讯（Rss）</li>
 </ul>
-
-
 <p></br>
 个人性格</br></p>
-
 <ul>
 <li>我喜欢跑步，游泳，骑单车，还有冲浪，虽然很少机会能玩</li>
 <li>我是一个敢于冒险挑战的人，曾花了22天骑行川藏线去西藏</li>
@@ -220,3 +344,4 @@ sup {
 
 </body>
 </html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
