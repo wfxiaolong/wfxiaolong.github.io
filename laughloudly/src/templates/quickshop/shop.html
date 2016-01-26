@@ -1,0 +1,84 @@
+<!--地点选择-->
+<div class="ms-bar bg-gray">
+  <div class="ms-bar-back" style="background-image:url(../src/images/shop_bg.png);overflow: hidden;">
+    <i class="icon-laugh icon-mark_back ms-back js-back" style="font-size: 2.9rem;"  onclick="window.history.go(-1)"></i>
+    <div class="vertify">
+      <span><{shop.name}></span>
+      <img class="vertifiy-img" src="../src/images/shop_auth.png" alt="">
+    </div>
+  </div>
+  <div class="ms-bar-gray ui-border-b ms-shop-bar">
+    <img class="ms-shop-img" src="<{shop.logo}>" alt="">
+    <span class="ms-shop-operation js-shop-detail">店铺保障</span>
+    <div class="ms-shop-tuan">
+      <{foreach: shop.qualifications as v}>
+        <i style=" font-size: 12px;border-radius:2px;color:white;background:#<{v.label.color|toString16}>;"><{v.label.key}></i>
+      <{/foreach}>
+    </div>
+    <span class="ms-shop-detail js-shop-detail">店铺详情</span>
+  </div>
+</div>
+<!-- 通知Tip-->
+<div class="index-notification">
+  <i class="icon-laugh icon-notification index-notification-text"></i>
+  <i class="text-center index-notification-text"><{shopTime}></i>
+</div>
+<!-- 店铺商品-->
+<div class="swiper-container ms-select-type ui-border-b">
+  <div class="swiper-wrapper">
+    <{foreach: shopCategory as item}>
+      <div class="swiper-slide ms-select-div">
+        <a class="js-category-click" data-id="<{item.objectId}>">
+          <{if: item.objectId==currentCategory}>
+            <i class="ms-select-title"><{item.name}></i>
+          <{elseif: item.objectId!=currentCategory}>
+            <i><{item.name}></i>
+          <{/if}>
+        </a>
+      </div>
+    <{/foreach}>
+  </div>
+</div>
+<!-- 商品列表-->
+<ul>
+  <{foreach: goods as index=>item}>
+    <li class="ms-goods-item js-goods-click" data-index="<{index}>">
+      <div class="ms-goods-img">
+        <img style="max-width: 80%;" src="<{item.images[0]}>">
+      </div>
+      <div class="ms-goods-info">
+        <h3 class="ms-goods-title"><{item.name}></h3>
+        <p class="ms-goods-price ui-border-b">¥ <{item.price}></p>
+      </div>
+      <{if: item.status == 1}>
+        <button class="buy-btn btn">购买</button>
+      <{elseif: item.status == 2}>
+        <button class="buy-btn btn">售完</button>
+      <{/if}>
+    </li>
+  <{/foreach}>
+</ul>
+
+<!-- 加载提示框-->
+<div class="ui-loading-block">
+  <div class="ui-loading-cnt" style="padding-top: 1.5rem;">
+    <i class="icon-laugh icon-wait animate-circle" style="font-size: 4rem"></i>
+    <p>疯狂加载中...</p>
+  </div>
+</div>
+
+<!-- 下拉加载更多 -->
+<div class="goods-list-wrap ">
+  <div class="loadmore">已加载完成</div>
+</div>
+
+<script src="../js/lib/swiper.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    slidesPerView: 4.5,
+    paginationClickable: true,
+    spaceBetween: 0,
+    freeMode: true
+  });
+</script>

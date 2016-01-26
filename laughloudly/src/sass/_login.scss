@@ -1,0 +1,74 @@
+@charset "utf-8";
+//--------------------------------
+// @authors: xlong
+// @desc: 大脉笑呵呵项目，登录页面样式
+//--------------------------------
+
+.loginpage {
+  .input-wrap {
+    position: relative;
+    display: -webkit-box;
+    margin-bottom: 1px;
+    background: #fff;
+  }
+  li {
+    padding: 0 .8rem;
+    height: 45px;
+    line-height: 45px;
+  }
+  i {
+    padding-right: .8rem;
+  }
+  input {
+    display: inline-block;
+    padding:  .8rem;
+    width: 100%;
+    border: 0;
+    font-size: 1.4rem;
+    height: 40px;
+    line-height: 40px;
+  }
+  .input-wrap .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 80%;
+    width: 105px;
+    background: #ac1d0f;
+    color: #fff;
+    font-size: inherit;
+  }
+  .input-box {
+    -webkit-box-flex: 1;
+  }
+  .text-right {
+    font-size: 8px;
+    line-height: 25px;
+    padding-right: 10px;
+    width: 100%;
+    text-align: right;
+  }
+  .btn-code {
+    width: 60px;
+    height: 30px;
+    font-size: 1.2rem;
+    color:#FF7026;
+    border: 1px solid #FF7026;
+    border-radius: 2px;
+  }
+  .btn-login {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.6rem;
+    background: #FF7026;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .btn-disable {
+    background: #BEBEBE;
+  }
+}

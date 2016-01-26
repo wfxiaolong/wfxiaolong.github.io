@@ -1,0 +1,9 @@
+<nav class="navbar" id="navbar" style="background:#FCFCFC;">
+  <div class="navbar-default">
+    <ul class="nav-list">
+      <{foreach: list as item}>
+      <li class="nav-li"><a href="#<{item.type}>" data-type="<{item.type}>" data-url="<{item.url}>"><em class="iconbox"><i class="icon" style="-webkit-mask-image:url(<{item.icon}>);"></i></em><span class="nav-text"><{item.title}></span></a></li>
+      <{/foreach}>
+    </ul>
+  </div>
+</nav>

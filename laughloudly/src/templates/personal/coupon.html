@@ -1,0 +1,35 @@
+<div class="location-page">
+  <{if: data.length}>
+  <{foreach: data as index => val}>
+    <div class="coupon-wrap js_coupondetail pointer" data-index="<{index}>">
+      <div class="coupon-info-wrap ui-row-flex">
+        <div class="border-dot pos-r overflow-h">
+          <p class="text-center coupon-price">&#165;<span class="price"><{val.value}></span></p>
+          <p class="text-center cash-coupon">现金券</p>
+          <div class="left-top-tip text-center <{val.status == 0 ? 'coupon-used' : (val.status == 1 ? 'expire' : 'expire' )}>">
+            <span><{val.status == 0 ? '可使用' : (val.status == 1 ? '已作废' : '已过期' )}></span>
+          </div>
+        </div>
+        <div class="ui-col ui-col">
+          <div class="coupon-title-wrap">
+            <h3 class="title">
+              <span><{val.title}></span>
+              <span class="lightblue">[查看详情]</span>
+            </h3>
+            <p class="coupon-validity">有效期：<{val.start}> 至 <{val.end}></p>
+            <p class="coupon-validity">券号：<{val.serial}></p>                
+          </div>
+        </div>
+      </div>
+    </div>
+  <{/foreach}>
+  <{elseif: !data.length}>
+  <div class="text-center" style="padding: 10rem 0;">          
+    <p class="big">你还没有相关现金券哦~</p>
+    <p class="c-gray"></p>
+  </div>
+  <{/if}>
+</div>
+    
+ 
+

@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+// 我的：水平排列
+.dmm-my-horizontal {
+  display: -webkit-box; height:size(164);overflow: hidden;
+  .nav-li {
+    -webkit-box-flex: 1;float: none !important; padding: size(20) 0; text-align: center;
+    a {
+      display: block;margin-right: -1px; height: 100%;border-right: 1px solid $lightgray;color: $black;
+    }
+  }
+}

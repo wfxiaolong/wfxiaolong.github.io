@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.fl { float: left; }
+.fr { float: right; }
+.dib,
+.inline-block { display: inline-block; *display:inline; *zoom:1; }
+.dn,
+.hide { display: none; }
+.db { display: block;}
+.hidetxt { overflow:hidden;font-size: 0;line-height: 0; }
+.wh0 { width: 0;height: 0;}
+.tdu {text-decoration: underline;}
+.tal,
+.text-left {text-align: left;}
+.tac,
+.text-center {text-align: center;}
+.tar,
+.text-right {text-align: right;}
+.text-justify {@extend %justify;}
+.vam {vertical-align: middle}
+.vat {vertical-align: top;}
+.vam { vertical-align: middle;}
+.btn { cursor: pointer;}
+.btn:hover {text-decoration: none;}
+.center-hor {margin-left: auto;margin-right: auto;}
+.center-v {@extend %center-v;}
+
+.clearfix,.clear {
+    *zoom: 1;
+    &:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+}
+.dibwrap { font-size:0; *word-spacing:-1px; 
+    .dib { font-size: 12px; letter-spacing: normal; word-spacing: normal; vertical-align:top; }
+}
+// pop
+// .pop-wp {
+//     display:none;
+
+//     .pop {
+//         top: 50%;left: 50%; @include pos-fixed-top();z-index: 101;
+//     }
+//     .mask{
+//         position:absolute;
+//         top:0;
+//         left:0;
+//         right: 0;
+//         bottom: 0;
+//         width:100%;
+//         height:100%;
+//         background: #000;
+//         @include opacity(.5);
+//         z-index:100;
+//     }
+//     .close {
+//         position: absolute;top: 0;right: 0; z-index: 10;*zoom: 1;*background: url(about:blank);cursor: pointer;font:45px/45px "Simsun"; text-align:center; color:#fff; 
+//         &:hover {text-decoration: none;}
+//     }
+// }
+

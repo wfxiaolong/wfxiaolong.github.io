@@ -1,0 +1,141 @@
+.dmm-form {
+  // margin-left: size(30);margin-right: size(30);
+  input[type="text"],
+  input[type="password"],
+  textarea,
+  button,
+  .btn {
+    /* border-radius: size(10); */border: 0;box-sizing: border-box;
+  }
+}
+
+// input
+.dmm-input {
+  @include hl(size(90));width: 100%;padding: 0 size(20);
+}
+
+// textarea
+.dmm-textarea {
+  width: 100%;padding: size(20);height: size(200);outline: 0;
+}
+
+// checkbox
+.dmm-checkbox-wrap {
+  font-size: 0;padding:size(15) size(30);margin-bottom: size(-20);background:#fff;
+  .dmm-checkbox {
+    display: inline-block;padding:0 size(40);margin:0 size(30) size(20) 0;@include hl(size(60));border: 1px solid #ddd;border-radius: size(10); font-size: size(30);vertical-align: middle;
+  }
+  .checked {
+    border-color: #00A0E8;color: #00A0E8;
+  }
+}
+
+// radio
+.dmm-radio {
+  position: relative;cursor: pointer;-webkit-appearance: none;width: size(32);@include hl(size(32));margin-top: 0 !important;
+  &:before,
+  &:after {
+    content: "";position: absolute;left: 0;top: 0;width:100%;height: 100%;font-size: 12px;border-radius: size(32);
+  }
+  &:before {
+    border: 1px solid #6F6F6F;
+  }
+  &:checked:after,
+  &.checked:after {
+    content:"\2714";border: 1px solid #4BC321; background:#4BC321;color:#fff;font-size: 12px;text-align: center;
+  }
+}
+
+.dmm-radio-wrap {
+  .item {
+    margin-bottom: 1px;border-bottom: 0;background:#fff;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// select
+.dmm-select-wrap {
+  position: relative;
+  .item {
+    background:#fff;border-bottom: 0;
+  }
+  .dmm-select {
+    position: absolute;left: 0;top: 0; width: 100%;height: 100%;opacity: 0;
+  }
+  .dm-icon {
+    width: 8px;
+  }
+}
+
+// submitBtn
+.dmm-btn-submit {
+  display: block;width: 100%; @include hl(size(100));background:#2571B7;color:#fff;font-size: size(32);text-align: center;
+}
+
+.dmm-upload-photo {
+  padding: 0 size(20);background:#fff;font-size: 0;
+  .thumbnail-warp{
+      margin: 8px 8px 8px 0;
+      width: 50px;
+      @include hl(50px);
+      position: relative;
+      border: 1px dashed $gray;
+      display: inline-block;
+      vertical-align: middle;
+
+      .loading,
+      .done{
+          width: 50%;
+          height: 50%;
+          top: 25%;
+          left: 25%;
+          z-index: 2;
+          border-radius: 50%;
+          line-height: 300%;
+          opacity: .6;
+          display: inline-block;
+          text-align: center;
+          position: absolute;
+          font-size: 30px;
+          color: #fff;
+      }
+      .loading{
+        background-color: #333;
+      }
+      .done{
+        background-color: #5f5;
+      }
+      .delete{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 11;        
+        
+        background-color: #f55;
+        // border: 1px solid #fff;
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        line-height: 22px;
+        border-radius:20px;
+        text-align: center;
+        font-size: 20px;
+        font-family: arial;
+      }
+  }
+  .preview,
+  .thumbnail {
+    position: absolute;top: 0;left: 0; width: 100%;height: 100%;overflow: hidden;text-align: center;
+  }
+  .preview img {
+    position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;width: 100%;height: auto;      
+  }
+  input[type=file]{
+    z-index: 10; opacity: 0;
+  }
+  .dm-icon-add {
+    font-size: 40px;color: $gray;font-weight: bold;
+  }  
+}

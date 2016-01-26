@@ -1,0 +1,22 @@
+@charset "utf-8";
+//--------------------------------
+// @authors: bimgle
+// @desc: 大脉app文章详情样式
+// @time: 2015-09-02
+//--------------------------------
+
+.article {
+  padding: rem(10) $sidegap;color:#000;font-size: rem(30);background:#fff;
+  .title {
+    font-size: rem(42);line-height: 1.2;
+  }
+}
+.art-header {
+  margin: rem(10) 0;
+}
+.art-info {
+  font-size: rem(22);color:#9B9B9B;
+}
+.art-content {
+  img {height: auto !important;}
+}

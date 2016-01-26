@@ -1,0 +1,60 @@
+  <div class="goods-search">
+    <div class="search-input" id="searchbox">
+      <input type="text" value="<{keyword}>" placeholder="搜索该店铺商品" class="js-search-value" />
+      <i class="icon-laugh icon-search js-search"></i>
+    </div>
+
+    <{if: data.length==0}>
+    <div class="search-history mt26">
+      <div class="title">
+        搜索历史
+      </div>
+      <ul>
+        <{foreach: history as index => item}>
+          <li class="js-click-history" data-key="<{item}>"><{item}></li>
+        <{/foreach}>
+      </ul>
+      <div class="text-center mt26">
+        <button class="mybtn btn-gray js-clear-history">清除历史记录</button>
+      </div>
+    </div>
+    <{/if}>
+  </div>
+
+  <ul class="goodslist">
+    <{foreach: data as index => item}>
+      <li>
+        <a class="clearfix js-goods-click" data-index="<{index}>">
+          <div class="imgbox fl">
+            <img src="<{item.images[0]}>" alt="" />
+          </div>
+          <div class="infobox">
+            <div class="title fl ui-nowrap-multi ui-whitespace">
+              <{item.name}>
+            </div>
+            <div class="info fl text-right">
+              <p class="price">&yen; 72.0</p>
+            </div>
+            <{if: item.status == 1}>
+            <button class="buy-btn btn">购买</button>
+            <{elseif: item.status == 2}>
+            <button class="buy-btn btn">售完</button>
+            <{/if}>
+          </div>
+        </a>
+      </li>
+    <{/foreach}>
+  </ul>
+
+  <!-- 下拉加载更多 -->
+  <div class="goods-list-wrap ">
+    <div class="loadmore"></div>
+  </div>
+
+  <!-- 加载提示框-->
+  <div class="ui-loading-block">
+    <div class="ui-loading-cnt" style="padding-top: 1.5rem;">
+      <i class="icon-laugh icon-wait animate-circle" style="font-size: 4rem"></i>
+      <p>疯狂加载中...</p>
+    </div>
+  </div>

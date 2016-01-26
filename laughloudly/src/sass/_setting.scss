@@ -1,0 +1,44 @@
+@charset "utf-8";
+//--------------------------------
+// @authors: bimgle
+// @desc: 大脉app配置
+// @time: 2015-08-13
+//--------------------------------
+
+$isMobile: true;
+
+$prefixForMicrosoft: false;
+$prefixForMozilla: false;
+
+$g-color: #333 !default;
+$g-bgcolor: #F1F1F1 !default;
+$g-bdcolor: #eee !default;
+$g-txt-gray: #A0A0A0;
+
+$shop-red: #DE0321;
+$shop-pink: #F33E8F;
+$shop-orange: #F39800;
+
+$sidegap: 30; // 页面两边空白间隙
+$bottombar-height: 100; // 底部fixedbar高度
+
+$theme: #ac1d0f !default; // 皮肤颜色
+
+$orange: #F39801;
+$black: #1F1F1F;
+
+// laugh loudly
+$ll-gray-back: #eee;
+$ll-check-orange: #fc561f; //checkbox底色
+
+// main page
+$ll-gray-navigation: #2C2A35;
+$ll-orange-postion: #FF8B27;
+$ll-blue-tip: #E6F9FF;
+$ll-blue-tip-text: #45B9EE;
+
+// ms
+$ll-ligthGray: #EEF3FA;
+$ll-gray-ms-navigation: #EEF3FA;
+$ll-orange-ms: #ff7228;
+$ll-active-bg: #e5e6e7;

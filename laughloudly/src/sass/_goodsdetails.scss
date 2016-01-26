@@ -1,0 +1,157 @@
+@charset "utf-8";
+//--------------------------------
+// @authors: bimgle
+// @desc: 校呵呵商品详情页面样式
+//--------------------------------
+
+.probox{
+  border-bottom: 1px solid $g-bdcolor;
+  .proimgbox{    
+    text-align: center;
+    background-color: #fff;    
+    border-bottom: 1px solid $g-bdcolor;
+    position: relative;
+    .swiper-wrapper{      
+      -webkit-box-align: center;      
+    }
+    .state{
+      position: absolute;
+      right: $sidegap;
+      bottom: $sidegap;
+      width: 3.5rem;
+      height: 3.5rem;
+      text-align: center;
+      line-height: 3.5rem;
+      border-radius: 50%;
+      background-color: #999;
+      opacity: .8;
+      color: #fff;
+      z-index: 2;
+    }
+  }
+  .proinfo{
+    padding-left: 1.3rem;
+    border-bottom: 1px solid $g-bdcolor;
+    background-color: #fff;
+    &.cant{
+      background-color: $g-bdcolor;
+    }
+    .title{
+      color: $black;
+      padding: 0.4rem 0.8rem 0.4rem 0;
+      border-bottom: 1px solid $g-bdcolor;
+    }
+    .ware{
+      border-bottom: 1px solid $g-bdcolor;
+      .icon-laugh{
+        color: #47dede;
+        font-size: size(40);
+      }
+    }
+    .pricebox{
+      height: 3rem;
+      line-height: 3rem;
+      border-bottom: 1px solid $g-bdcolor;
+      .price{
+        font-size: 1.4rem;
+      }
+      .oldprice{
+        color: #ccc;
+        font-size: 1.1rem;
+      }
+    }
+    .cant-buy{
+      padding: 0.8rem 0;
+      border-bottom: 1px solid $g-bdcolor;
+      padding-right: 0.8rem;
+    }
+    .buybox{
+      padding: 0.8rem 0.8rem 0.8rem 0;
+      .mybtn{
+        margin-left: 1rem;
+      }
+      .inbuybox{
+        background-color: $ll-gray-back;
+        border-radius: 5px;
+        height: 3.7rem;
+        line-height: 3.7rem;
+        padding-left: 0.5rem;
+        .btn-round{
+          width: 3rem;
+          height: 3rem;
+          line-height: 3rem;
+          border-radius: 50%;
+          background-color: #f9f9f9;
+          color: #92aab7;
+          display: inline-block;
+          text-align: center;  
+          margin-top: 0.35rem;        
+        }
+        .num{
+          display: inline-block;
+          width: 4rem;
+          text-align: center;
+        }        
+      }
+    }
+  }
+  .prodetails{
+    background-color: #fff;
+    margin-top: $mt;
+    &.cant{
+      background-color: $g-bdcolor;
+    }
+    .title{
+      font-size: 1.6rem;
+      color: $black;
+      padding: 0 0.8rem;      
+      line-height: 3rem;
+      border-bottom: 1px solid $g-bdcolor;;
+    }
+    .content{
+      padding: 0.8rem 0rem 0.8rem 0.8rem;
+    }
+  }
+}
+.img-back{
+  position: fixed;
+  width: 3.3rem;
+  height: 3.3rem;
+  line-height: 3.3rem;
+  top: 2.5rem;
+  left: 1rem;
+  border-radius: 50%;
+  background-color: #999;
+  opacity: .8;
+  color: #fff;
+  z-index: 90;
+}
+.img-cartbox{
+  position: fixed;  
+  bottom: 3rem;
+  right: 1rem;  
+  z-index: 90;
+  .img-cart{
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    background-color: $shop-orange;
+    box-shadow: 1px solid #aaa;
+    color: #fff;
+    position: relative;
+    opacity: .9;
+    &.on{
+      animation: cartfill 0.5s;
+    }
+  }  
+  .icon-laugh{
+    font-size: 3.3rem;
+  }
+  .bdage{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+

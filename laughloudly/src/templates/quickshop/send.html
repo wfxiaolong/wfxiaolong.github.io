@@ -1,0 +1,21 @@
+<!-- tableView-->
+<ul>
+  <{foreach: data as index=>item}>
+    <li>
+      <div class="dss-div ui-border-b js-click-shop" data-index="<{index}>">
+        <img class="dss-img" src="<{item.logo}>">
+        <div class="dss-lab-div">
+          <h3 class="dss-goods-title"><{item.name}></h3>
+          <{foreach: item.qualifications as v}>
+            <i style=" font-size: 12px;border-radius:2px;color:white;background:#<{v.label.color|toString16}>;"><{v.label.key}></i>
+          <{/foreach}>
+          <{if: item.status==1}>
+            <i class="dss-goods-status-orange">营业中</i>
+          <{elseif: item.status != 1}>
+            <i class="dss-goods-status-gray">休息中</i>
+          <{/if}>
+        </div>
+      </div>
+    </li>
+  <{/foreach}>
+</ul>

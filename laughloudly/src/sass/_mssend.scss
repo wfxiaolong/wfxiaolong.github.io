@@ -1,0 +1,45 @@
+@charset "utf-8";
+//--------------------------------
+// @authors: xlong
+// @desc: mobile shop send
+//--------------------------------
+
+
+// the bar of the mobile shop send
+.dss-div {
+  width: 100%;
+  height: size(165);
+  position: relative;
+  padding: size(27.5) size(15) size(0) size(15);
+  @include clearfix;
+}
+.dss-img {
+  position: absolute;
+  top: size(27.5);
+  left: size(15);
+  height: size(120);
+  width: size(120);
+  margin-right: size(15);
+}
+.dss-lab-div {
+  margin-left: size(150);
+}
+.dss-goods-title {
+  font-size: rem(25);
+}
+.dss-goods-status {
+  font-size: rem(25);
+  float: right;
+}
+.dss-goods-status-gray {
+  @extend .dss-goods-status;
+  color: dimgray;
+  border-bottom: 2px solid dimgray;
+  border-top: 2px solid dimgray;
+}
+.dss-goods-status-orange {
+  @extend .dss-goods-status;
+  color: orangered;
+  border-bottom: 2px solid orangered;
+  border-top: 2px solid orangered;
+}

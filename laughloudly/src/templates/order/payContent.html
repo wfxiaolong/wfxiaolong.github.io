@@ -1,0 +1,33 @@
+
+    <!-- 顶部导航栏 -->
+    <div class="topbar clearfix">
+      <div class="back">
+        <i class="icon-laugh icon-back"></i>
+        <span>返回</span>
+      </div>
+      <div class="title">在线支付</div>
+      <div class="top-right"></div>
+    </div>
+    <!-- 顶部导航栏结束 -->
+    <div class="paybox bg-white">
+      <div class="paynum bg-gray">
+        在线支付金额：<em>&yen;<{data.result}></em>
+      </div>  
+      <ul class="ui-list ui-border-tb payul"> 
+        <{foreach: data.payments as index => payment}>                 
+          <li class="ui-border-t pointer active-bg">            
+              <div class="content ui-row-flex ui-flex-align-center">
+              <!--  -->
+                  <i class="icon-laugh icon-<{payment.key}>" ></i>
+                  <div class="ui-col">
+                    <span><{payment.name}></span> 
+                    <{if: payment.desc}>
+                    <span style="color: #<{payment.desc ? (payment.desc.color).toString(16) : '7ed321'}>;" class="small">(<{payment.desc.text}>)</span>
+                    <{/if}>
+                  </div>
+              </div>            
+          </li>          
+        <{/foreach}>                    
+      </ul>           
+    </div>  
+  

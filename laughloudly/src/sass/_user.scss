@@ -1,0 +1,158 @@
+@charset "utf-8";
+//--------------------------------
+// @authors: bimgle
+// @desc: 大脉超市页面样式
+//--------------------------------
+.welcome{
+  height: size(220);  
+  font-size: (32);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a6d2d5+0,a9d2d6+0,e7eab5+89,e7eab4+100,207cca+100,e7eab5+100,a9d2d6+100 */
+  background: #a6d2d5; /* Old browsers */  
+  background: -webkit-radial-gradient(bottom, ellipse cover,  #a6d2d5 0%,#a9d2d6 0%,#e7eab5 89%,#e7eab4 100%,#207cca 100%,#e7eab5 100%,#a9d2d6 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at bottom,  #a6d2d5 0%,#a9d2d6 0%,#e7eab5 89%,#e7eab4 100%,#207cca 100%,#e7eab5 100%,#a9d2d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6d2d5', endColorstr='#a9d2d6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  button{
+    margin-top: size(15);
+  }
+}
+.userinfo{  
+  height: size(220);  
+  font-size: (32);
+  position: relative;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a6d2d5+0,a9d2d6+0,e7eab5+89,e7eab4+100,207cca+100,e7eab5+100,a9d2d6+100 */
+  background: #a6d2d5; /* Old browsers */  
+  background: -webkit-radial-gradient(bottom, ellipse cover,  #a6d2d5 0%,#a9d2d6 0%,#e7eab5 89%,#e7eab4 100%,#207cca 100%,#e7eab5 100%,#a9d2d6 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at bottom,  #a6d2d5 0%,#a9d2d6 0%,#e7eab5 89%,#e7eab4 100%,#207cca 100%,#e7eab5 100%,#a9d2d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6d2d5', endColorstr='#a9d2d6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  .manage-area{
+    position: absolute;
+    right: $sidegap;
+    bottom: $sidegap;
+    cursor: pointer;
+  }
+  .img-wrap{
+    padding: $sidegap;    
+    img{
+      width: size(136);
+      height: size(136);
+      border-radius: 50%;  
+      border: 2px solid #fff;    
+    }
+  }
+  .tel-wrap{
+    font-size: size(32);
+  }
+  .mybtn{
+    height: size(50);
+  }
+}
+.userbox{  
+  padding: $sidegap;  
+  .title{
+    font-size: size(32);
+    padding-left: size(20);
+    color: $black;
+  }
+  .msg{
+    font-size: size(28);
+    color: #aaa;
+    span{
+      color: $shop-orange;
+    }
+  }
+  .usericon{
+    color: #fff;
+    border-radius: 20%;
+    padding: 15%;
+  }
+  .icon-order{
+    @extend .usericon;
+    background-color: #ff7a2f;    
+  }
+  .icon-iconcoupon{
+    @extend .usericon;
+    background-color: #39cdba;    
+  }
+  .icon-30{
+    @extend .usericon;
+    background-color: #ffa619;    
+  }
+  .icon-xiaolian{
+    @extend .usericon;
+    background-color: #b7dc55;    
+  }
+  .icon-tuijianyaoqing{
+    @extend .usericon;
+    background-color: #ff7171;    
+  }
+}
+
+.status {    
+  padding: 1rem 0;  
+  a{    
+    display: block;    
+  }
+  .icon-laugh{
+    font-size: 2.5rem;
+    line-height: 3rem;      
+    position: relative;
+    font-weight: 100;
+    color: #aaa;
+  }
+  .title{
+    font-size: size(24);
+  }  
+  li{
+    position: relative;    
+    &:after{
+      content: attr(data-msg);
+      @extend .bdage;
+      position: absolute;
+      top: 0rem;
+      left: 50%;
+      margin-left: 0.5rem;
+      display: none;
+    }    
+    &.msg{            
+      &:after{
+        display: block;
+      }      
+    }    
+  }   
+}
+
+.myorder-head{
+  height: size(90);
+  line-height: size(90);
+  div{
+    height: 100%;
+    &.active{
+      border-bottom: size(4) solid #ff7026;
+      color: $black;
+    }     
+  }
+}
+.myorder-title{
+  padding: $sidegap;  
+}
+.myorder-info{
+  font-size: size(24);
+  padding-left: $sidegap;
+  color: #aaa;
+}
+.myorder-name{
+  font-size: size(32);
+  padding-right: $sidegap;
+  color: $black;
+  .icon-laugh{
+    font-size: size(36);
+  }
+}
+
+.btn-quit{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+

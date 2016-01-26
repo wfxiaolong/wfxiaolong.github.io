@@ -1,0 +1,87 @@
+<{foreach: data.shops as index=>item}>
+  <div class="js-table-cell" data-index="<{index}>">
+    <div class="cartbox cart-box-complete">
+      <div class="ui-row-flex cart-head">
+        <div class="ui-col">
+          <label class="ui-checkbox">
+            <input class="js-checkbox js-shop-check" data-shopid="<{item.objectId}>" data-index="<{index}>" type="checkbox" onclick="return false" <{if: item.check == true}>checked<{/if}>>
+          </label>
+        </div>
+        <div class="ui-col-4 title">
+          <{item.name}>
+        </div>
+        <div class="ui-col-2 text-center editbox">
+          <a class="js-class-edit" data-index="<{index}>">编辑</a>
+        </div>
+      </div>
+      <ul class="cart-body-box">
+        <{foreach: item.items as num=>value}>
+          <li class="cart-body ui-row-flex ui-flex-align-center">
+            <!-- 商品详情显示-->
+            <label class="ui-checkbox">
+              <input class="js-checkbox js-goods-check" type="checkbox" data-shopid="<{item.objectId}>" data-index="<{index}>" data-num="<{num}>" data-goodsid="<{value.objectId}>" onclick="return false" <{if: value.check==true}>checked<{/if}>>
+            </label>
+            <div class="imgbox">
+              <img src="<{value.images[0]}>" />
+              <div class="alert">
+                <{value.stock}>
+              </div>
+            </div>
+            <div class="titlebox ui-col edit-complete">
+              <p class="title ui-nowrap-multi ui-whitespace">
+                <{value.name}>
+              </p>
+              <p class="alert red  ui-nowrap-multi ui-whitespace">
+                <{if: value.stock<10}>
+                商品库存不足<{value.stock}>件
+                <{/if}>
+              </p>
+            </div>
+            <div class="pricebox text-right edit-complete">
+              <p>&yen; <{value.price}></p>
+              <{if: value.orginalPrice}>
+              <del>&yen; <{value.originalPrice}></del>
+              <{/if}>
+              <p class="red js-goods-num-red">X<{value.count}></p>
+            </div>
+            <!-- 商品状态修改-->
+            <div class="titlebox ui-col ui-flex-self-start edit-goods">
+              <div class="numbox">
+                <button class="jian js-goods-count" data-type="DELETE" data-goodsid="<{value.objectId}>" data-shopid="<{item.objectId}>">-</button>
+                <span class="js-goods-num"><{value.count}></span>
+                <button class="jia js-goods-count" data-type="PUT" data-goodsid="<{value.objectId}>" data-shopid="<{item.objectId}>">+</button>
+              </div>
+            </div>
+            <div class="pricebox text-right edit-goods">
+              <button class="mybtn btn-red delbtn js-goods-del" data-goodsid="<{value.objectId}>" data-shopid="<{item.objectId}>">删除</button>
+            </div>
+
+          </li>
+        <{/foreach}>
+      </ul>
+    </div>
+    <div class="cartfoot clearfix">
+      <{if: data.tips}>
+        <button class="mybtn btn-lightyellow fl"><{data.tips}></button>
+      <{/if}>
+      <div class="msg fr">
+        <span class="js-shop-fees">(含运费<{item.fees}>元)</span>
+        <i class="js-shop-result">&yen; <{item.result}></i>
+        <!--<p class="red">只支持货到付款</p>-->
+      </div>
+    </div>
+  </div>
+<{/foreach}>
+
+<div class="surebar ui-row-flex ui-flex-align-center">
+  <div class="price js-price-result">
+      &yen; <{data.result}>
+  </div>
+  <div class="total ui-col">
+      <p class="js-fees-result">含运费<{data.fees}>元</p>
+      <p class="js-count-result">总计<{data.check}>件</p>
+  </div>
+  <button class="mybtn js-btn-pay">
+      结算
+  </button>
+</div>

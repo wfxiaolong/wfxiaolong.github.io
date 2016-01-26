@@ -1,0 +1,67 @@
+<div class="probox">
+  <div class="proimgbox">
+    <div class="swiper-container app-fontsize-zero " id="swiper_container">
+        <div class="swiper-wrapper">
+          <{foreach: data.images as image}>
+          <div class="swiper-slide">
+            <a data-type="page">
+              <img src="<{image}>" alt="美女">
+            </a>
+          </div>
+          <{/foreach}>
+        </div>
+    </div>
+    <div class="state">
+      <span id="active-num">1</span>/<i><{data.images.length}></i>
+    </div>
+  </div>
+  <div class="proinfo">
+    <div class="title">
+      <{data.name}>
+    </div>
+    <{if: data.promotions.length}>
+    <div class="ware">
+      <i class="icon-laugh icon-zhe"></i>
+      <i class="icon-laugh icon-zhe"></i>
+    </div>
+    <{/if}>
+    <div class="pricebox">
+      <span class="red price">&yen; <{data.price}></span>
+      <{if: data.originalPrice>0}>
+        <del class="oldprice">&yen; <{data.originalPrice}></del>
+      <{/if}>
+    </div>
+    <div class="buybox clearfix">
+      <{if: data.stock < 1}>
+        <button class="mybtn btn-gray fr">已售罄</button>
+      <{elseif: data.stock > 1}>
+        <div class="js-opt-normal">
+          <button class="mybtn fr js-addGoods-cart">加入购物车</button>
+          <button class="mybtn btn-lightyellow fr js-opt-pay-normal">立即购买</button>
+        </div>
+        <div class="fr inbuybox js-opt-pay hide">
+          <a class="btn-round jian js-minus-goods">-</a>
+          <span class="num js-num-goods">1</span>
+          <a class="btn-round jia js-add-goods" style="color: orangered;">+</a>
+          <a class="mybtn js-buy-goods">下单</a>
+        </div>
+      <{/if}>
+    </div>
+  </div>
+  <div class="prodetails mt26">
+    <div class="title">
+      商品详情
+    </div>  
+    <div class="content">
+      <{data.detail ? data.detail.desc : '无'}>
+    </div> 
+  </div>
+</div>
+<div class="img-back text-center pointer" onclick="javascript:window.history.go(-1);"><i class="icon-laugh icon-back"></i></div>
+<div class="img-cartbox">
+  <div class="img-cart text-center pointer js-cart-goods" onclick="location.href='#params/cart'">
+    <i class="icon-laugh icon-cart"></i>
+    <i class="bdage js-goods-count"><{goodsCount}></i>
+  </div>  
+</div>
+

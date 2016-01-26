@@ -1,0 +1,105 @@
+
+    <nav class="myorder-head ui-row-flex ui-flex-align-center ui-border-b bg-white hide" id="myorder_type">
+      <div class="ui-col text-center pointer active-bg active" data-status="1" >待付款</div>
+      <div class="ui-col text-center pointer active-bg" data-status="2">待处理</div>
+      <div class="ui-col text-center pointer active-bg" data-status="3">配送中</div>
+      <div class="ui-col text-center pointer active-bg" data-status="0">已取消</div>
+      <div class="ui-col text-center pointer active-bg" data-status="4">已完成</div>
+    </nav> 
+    <div id="box_myorderlist"></div>
+    <!-- 加载提示框-->
+    <div class="ui-loading-block" id="crazyLoad">
+      <div class="ui-loading-cnt" style="padding-top: 1.5rem;">
+        <i class="icon-laugh icon-wait animate-circle" style="font-size: 4rem"></i>
+        <p>疯狂加载中...</p>
+      </div>
+    </div>
+
+    <div class="app-pop hide">
+      <aside></aside>
+    </div>
+    <script type="text/template" id="tm_myorderlist" >
+      <{if: data.length}>
+      <{foreach: data as index => val}> 
+      <div class="orderbox bg-white mt26">
+        <div class="myorder-title ui-row-flex ui-flex-align-center">
+          <div class="myorder-name text-right ui-border-r">
+            <i class="icon-laugh icon-shop"></i> <{val.shop.name}>
+            <div class="c-orange"><{val.status == 0 ? '已取消' : (val.status == 1 ? '待付款' : (val.status == 2 ? '待处理' : (val.status == 3 ? '配送中' : '已完成')))}></div>
+          </div> 
+          <div class="myorder-info">
+            <p>订单号：<{val.serial}></p>
+            <p>下单时间：<{val.createdAt}></p>
+            <{if: val.status !== 1 && val.status !== 0}>
+            <p>支付方式：<{val.payBy}></p>
+            <{/if}>
+          </div>
+        </div>
+             
+        <div class="ui-border-b orderinfo pointer js-goods-details active-bg" data-index="<{index}>">
+          <div class="ordercontent clearfix"> 
+            <div class="orderimg fl">            
+              <{foreach: val.items.slice(0, 5) as i => item}>
+              <img src="<{item.images[0]}>" alt="<{item.name}>" />             
+              <{/foreach}>
+            </div>        
+            <span class="fr ordermsg" >
+              <{if: val.items.length > 5}>
+              <i class="icon-laugh icon-more"></i>
+              <{/if}> 
+              共<{val.items.length}>件
+            </span>
+          </div>      
+          <i class="icon-laugh icon-forward ordericonr"></i>
+        </div>
+        
+        <div class="orderinfo ui-border-b clearfix">
+          <div class="clearfix">
+            <div class="fl">合计</div>
+            <div class="fr">&yen; <{val.summary.total}></div>
+          </div>
+          <div class="clearfix bg-gray">
+            <div class="fl">优惠</div>
+            <div class="fr c-orange">- &yen; <{val.summary.discount}></div>
+          </div>
+          <div class="clearfix">
+            <div class="fl">运费</div>
+            <div class="fr c-orange">+ &yen; <{val.summary.fees}></div>
+          </div>
+          <div class="fr c-orange">
+            <{foreach: val.gifts as index => gift}>
+            <p>【赠】 <{gift}></p>
+            <{/foreach}>
+          </div>
+        </div>
+        <div class="orderinfo clearfix">
+          <div class="fr"> 
+              <em>实付款：&yen; <{val.result}></em>
+          </div>      
+        </div>  
+        <div class="orderinfo">
+          <p><span class="c-gray">配送地址：</span><{val.contact.address}></p>
+          <p><span class="c-gray">配送时间：</span><{val.delivery.time}></p>          
+          <p><span class="c-gray">补充说明：</span><{val.delivery.remarks ? val.delivery.remarks : '无' }></p>          
+        </div>  
+        <{if: val.status === 1}> 
+        <div class="orderinfo text-right">
+          <button class="mybtn btn-white js-cancel active-bg" data-id="<{val.objectId}>">取消订单</button>
+          <button class="mybtn js-pay" data-index="<{index}>">去付款</button>
+          <p class="mt26 js-check pointer blue" data-id="<{val.objectId}>">我已付款</p>
+        </div>
+        <{/if}>             
+      </div> 
+      <{/foreach}> 
+      <{elseif: !data.length}>
+        <div class="text-center" style="padding: 10rem 0;">          
+          <p class="big">你还没有相关订单哦~</p>
+          <p class="c-gray">快去挑选相关商品吧~</p>
+        </div>
+      <{/if}>
+    </script>
+
+    
+    
+    
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no" />
+  <link rel="stylesheet" href="../css/app.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1451697264_2998176.css" />
+  <title>商品详情</title>  
+</head>
+
+<body class="bg-gray notopbar nobottombar"> 
+  <div class="_wraper">
+    <div class="probox">
+      <div class="proimgbox">
+        <div class="swiper-container app-fontsize-zero " id="swiper_container">
+            <div class="swiper-wrapper">              
+              <div class="swiper-slide">
+                <a href="#page/p=77l&amp;app=1" data-type="page">
+                  <img src="../images/p1.png" alt="美女">
+                </a>
+              </div>  
+              <div class="swiper-slide">
+                <a href="#page/p=77l&amp;app=1" data-type="page">
+                  <img src="http://1000001.zhisy.com:66/uploads/1510/122027161802.png" alt="美女">
+                </a>
+              </div>            
+            </div>            
+        </div>
+        <div class="state">
+          <span id="active-num">1</span>/<i id="all-num">1</i>
+        </div>
+      </div>
+      <div class="proinfo">
+        <div class="title">
+          五月花保温壶全不锈钢热水瓶五月花保温壶全不锈钢热水瓶五月花保温壶全不锈钢热水瓶五月花保温壶全不锈钢热水瓶
+        </div>
+        <div class="ware">
+          <i class="icon-laugh icon-zhe"></i>
+          <i class="icon-laugh icon-zhe"></i>
+        </div>
+        <div class="pricebox">
+          <span class="red price">&yen; 72.0</span>
+          <del class="oldprice">&yen;90.0</del>
+        </div>
+        <div class="cant-buy clearfix">
+          <button class="mybtn btn-gray fr">已售罄</button>
+        </div>        
+        <div class="buybox clearfix">
+          <button class="mybtn fr">加入购物车</button>
+          <button class="mybtn btn-lightyellow fr">立即购买</button>
+          <div class="fr inbuybox">
+            <a class="btn-round jian" href="javascript: void(0)">-</a>
+            <span class="num">2</span>
+            <a class="btn-round jia" href="javascript: void(0)">+</a>
+            <a class="mybtn" href="javascript: void(0)">下单</a>
+          </div>
+        </div>
+      </div>
+      <div class="prodetails">
+        <div class="title">
+          商品详情
+        </div>
+        <div class="content">
+          商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情
+        </div>
+      </div>
+    </div>
+    <div class="img-back text-center pointer"><i class="icon-laugh icon-back"></i></div>
+    <div class="img-cart text-center pointer">
+      <i class="icon-laugh icon-cart"></i>
+      <i class="bdage">99</i>
+    </div>
+  </div> 
+  <script src="../js/lib/swiper.min.js"></script>
+  <script>           
+    var mySwiper = new Swiper('#swiper_container',{
+      onInit: function(swiper){
+        document.getElementById("active-num").innerHTML=swiper.activeIndex+1;
+        document.getElementById("all-num").innerHTML=swiper.slides.length;
+      },
+      onSlideChangeEnd: function(swiper){
+        document.getElementById("active-num").innerHTML=swiper.activeIndex+1;
+      }
+    }) 
+  </script>
+</body>
+</html>

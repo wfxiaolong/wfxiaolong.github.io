@@ -1,0 +1,116 @@
+@charset "utf-8";
+//--------------------------------
+// @authors: bimgle
+// @desc: 大脉超市页面样式
+//--------------------------------
+
+.shopl{
+  width: 23%;
+  li{
+    a{
+      display: block;
+      font-size: 1rem;
+      text-align: center;
+      line-height: 4.4rem;
+      box-sizing: border-box;
+      border-right:1px solid #eee;
+      border-left: 5px solid #fff;
+      border-bottom:1px solid #fff;
+      border-top:1px solid #fff;
+    }
+    &:hover{
+      a{
+        border-right:1px solid #fff;
+        border-left: 5px solid #ff7026;
+        border-bottom:1px solid #eee;
+        border-top:1px solid #eee;
+        color: #ff7026;
+      }        
+    } 
+    &.on{
+      a{
+        border-right:1px solid #fff;
+        border-left: 5px solid #ff7026;
+        border-bottom:1px solid #eee;
+        border-top:1px solid #eee;
+      }        
+    }
+  }
+
+}
+.shopr{
+  width: 77%;  
+  li{        
+    .imgbox{
+      width: 40%;
+      text-align: center;
+      padding-top: 0.5rem;
+      img{
+        width: 80%;
+      }
+    }
+    .infobox{
+      width: 55%;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      .title{
+        font-size: 1.3rem;
+        height: 4rem;
+        overflow: hidden;
+      }
+      .price{
+        color: #f54735;
+      }
+      .old-price{
+        text-decoration: line-through;
+        color: #cccccc;
+      }
+      button{
+        width: 4.5rem;
+        height: 3rem;
+        color: #ff7026;
+        border: 1px solid #ff7026;
+        border-radius: 5px;
+        position: absolute;
+        right: 2.5rem;
+        bottom: 1rem;
+      }
+    }
+  }
+}
+
+// 商品清单
+.goodslist{
+  padding-bottom: 2rem;
+  margin-left: 1rem;
+  li{    
+    a{
+      display: block;
+      position: relative;
+      .imgbox{
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+        width: 6rem;
+        img{
+          width: 6rem;
+        }        
+      }
+      .infobox{
+        margin-left: 6rem;
+        padding: 1.3rem 0.8rem;
+        border-bottom: 1px solid #eee;
+        height: 8.4rem;
+        font-size: size(28);
+      }
+      .title{
+        width: 70%;
+      }
+      .info{
+        width: 30%;
+      }
+    }    
+  }  
+}
+

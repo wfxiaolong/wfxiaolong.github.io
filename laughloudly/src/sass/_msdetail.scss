@@ -1,0 +1,72 @@
+@charset "utf-8";
+//--------------------------------
+// @authors: xlong
+// @desc: mobile shop describe
+//--------------------------------
+
+// the bar of the head
+.msd-bar-back {
+  width: 100%;
+  height: size(160);
+  position: relative;
+}
+.msd-shop-name {
+  position: absolute;
+  bottom: size(10);
+  left: size(30);
+  font-size: rem(40);
+  color: white;
+}
+// the shop describe
+.msd-title {
+  display: block;
+  width: 100%;
+  font-weight:bold;
+  margin-left: size(30);
+  line-height: size(70);
+  font-size: rem(32);
+}
+.msd-describe {
+  display: block;
+  padding: size(30);
+  font-size: rem(28);
+}
+
+// The contact btn
+.msd-describ-labicon {
+  display: block;
+  position: relative;
+  padding: size(15) size(30) size(15) size(30);
+  font-size: rem(28);
+}
+.msd-describ-img {
+  position: absolute;
+  top: size(28);
+  width: size(30);
+  height: size(30);
+  font-size: 12px;
+  text-align: center;
+  border-radius:2px;
+  color:white;
+}
+.msd-describ-lab {
+  display: block;
+  margin-left: size(45);
+  line-height: size(55);
+  font-size: rem(28);
+  color: #ADBFC9;
+}
+.msd-relative {
+  width: 90%;
+  height: size(70);
+  display: block;
+  margin: size(40) 5% size(30) 5%;
+  border-radius: size(10);
+  text-align: center;
+  color: white;
+  background-color: lightslategray;
+}
+.msd-relative-lab {
+  margin-right:5%;
+  float: right;
+}

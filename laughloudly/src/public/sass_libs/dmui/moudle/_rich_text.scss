@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.dmm-richtext {
+  padding:10px 10px;font-size:16px;line-height:1.5;
+  table {margin: 10px 0;}
+  th, td {
+    padding: 2px 3px;border: 1px solid $gray;
+  }
+}
