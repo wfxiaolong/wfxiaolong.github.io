@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on My New Hugo Site</title>
+    <link>http://wfxiaolong.github.io/tags/development/</link>
+    <description>Recent content in Development on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Dec 2015 13:15:30 +0800</lastBuildDate>
+    <atom:link href="http://wfxiaolong.github.io/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>post golang</title>
+      <link>http://wfxiaolong.github.io/posts/first-post/</link>
+      <pubDate>Wed, 09 Dec 2015 13:15:30 +0800</pubDate>
+      
+      <guid>http://wfxiaolong.github.io/posts/first-post/</guid>
+      <description>&lt;hr /&gt;
+
+&lt;p&gt;As you know, golang is a good language;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;show&lt;/li&gt;
+&lt;li&gt;go&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
