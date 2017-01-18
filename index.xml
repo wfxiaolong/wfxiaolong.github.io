@@ -8,21 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Dec 2015 13:15:30 +0800</lastBuildDate>
     <atom:link href="http://wfxiaolong.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
     <item>
-      <title>post golang</title>
-      <link>http://wfxiaolong.github.io/posts/first-post/</link>
-      <pubDate>Wed, 09 Dec 2015 13:15:30 +0800</pubDate>
-      
-      <guid>http://wfxiaolong.github.io/posts/first-post/</guid>
-      <description>&lt;hr /&gt;
-
-&lt;p&gt;As you know, golang is a good language;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;show&lt;/li&gt;
-&lt;li&gt;go&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     
