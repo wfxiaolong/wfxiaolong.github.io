@@ -1,8 +1,27 @@
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+//
+//  main.js
+//  main
+//
+//  Created by Horton on 1/20/17.
+//  Copyright © 2017 YY Inc. All rights reserved.
+//
+
+$('.js-swipephoto').on('click', function(){
+	var pswpElement = document.querySelectorAll('.pswp')[0];
+	var items = [
+	    {
+	        src: 'images/fulls/iOS_Stack.png',
+	        w: 1607,
+	        h: 2310
+	    }
+	];
+	var options = {
+	    index: 0 
+	};
+	// Initializes and opens PhotoSwipe
+	var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+	gallery.init();
+});
 
 (function($) {
 

@@ -35,8 +35,8 @@ function initPartical(canvasId, particalText, particalImgSrc, imgId) {
 	};
 	var particleArray = [];
 	var animateArray = [];
-	var particleSize_x = 3;
-	var particleSize_y = 3;
+	var particleSize_x = 2;
+	var particleSize_y = 2;
 	var canvasHandle = {
 		init: function () {
 		  	this._reset();
