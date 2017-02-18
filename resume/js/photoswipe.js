@@ -52,6 +52,8 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
     // triggers when user clicks on thumbnail
     var onThumbnailsClick = function(e) {
+        if (!e.target.hasAttribute('data-size')) return;
+        
         e = e || window.event;
         e.preventDefault ? e.preventDefault() : e.returnValue = false;
 
