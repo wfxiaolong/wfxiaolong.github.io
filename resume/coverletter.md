@@ -8,7 +8,7 @@ I enjoy being challenged and working on projects that require me to work outside
 
 I've attached a copy of my resume that details my projects and experience in software development and spent few days building a resume website online.(<a href="http://wfxiaolong.github.io/resume/index.html">http://wfxiaolong.github.io/resume/index.html</a>)</br>
 
-Once offer is received, I will be able to start working within a month. I can be reached anytime via my Email(horton.lin3@gmail.com) or cell phone(+86 15913159968).</br>
+Once offer is received, I will be able to start working within a month. I can be reached anytime via my Email(horton.lin3@gmail.com) or cell phone(02108370117).</br>
 
 Thank you for your time and consideration. I look forward to speaking with you about this opportunity.</br>
 
